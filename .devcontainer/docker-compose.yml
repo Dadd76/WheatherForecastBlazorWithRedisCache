@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  app:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    
+    volumes:
+      - ../..:/workspaces:cached
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      REDIS_CONNECTION: "redis:6379" 
+    command: sleep infinity
+    networks:
+      - dev_network  # Correction : mettre "app" sur le même réseau que Redis
+
+  redis:
+    image: redis:alpine
+    restart: unless-stopped
+    ports:
+      - "6379:6379" # Optionnel : pour tester Redis en local
+    networks:
+      - dev_network
+
+networks:
+  dev_network:  # Définition du réseau personnalisé
+    driver: bridgen   
