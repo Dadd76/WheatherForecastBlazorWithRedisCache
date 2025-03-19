@@ -25,4 +25,4 @@ services:
 
 networks:
   dev_network:  # Définition du réseau personnalisé
-    driver: bridgen   
+    driver: bridge  
