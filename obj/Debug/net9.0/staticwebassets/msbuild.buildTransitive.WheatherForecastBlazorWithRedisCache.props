@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../buildMultiTargeting/WheatherForecastBlazorWithRedisCache.props" />
+</Project>

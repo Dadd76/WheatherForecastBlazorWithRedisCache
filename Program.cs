@@ -1,10 +1,21 @@
 using WheatherForecastBlazorWithRedisCache.Components;
+using StackExchange.Redis;
+using Microsoft.Extensions.Caching.StackExchangeRedis;
+using WheatherForecastBlazorWithRedisCache;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+ 
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+options.Configuration = builder.Configuration.GetConnectionString("Redis");
+options.InstanceName  = "WeatherForcast_";
+});
+
+builder.Services.AddSingleton<WeatherForcastService>();
 
 var app = builder.Build();
 

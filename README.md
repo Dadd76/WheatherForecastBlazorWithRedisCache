@@ -43,6 +43,5 @@ Pour vérifier que vos informations sont correctement configurées, vous pouvez 
 -----------------------------------------------------------------------------------------------------------------------------
 Redis package
 -----------------------------------------------------------------------------------------------------------------------------
-
-microsoft.extensions.caching.StackExchangeRedis
-StackExchange.Redis
+> dotnet add package Microsoft.Extensions.Caching.StackExchangeRedis
+> dotnet add package StackExchange.Redis
