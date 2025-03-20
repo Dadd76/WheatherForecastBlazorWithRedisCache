@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WheatherForecastBlazorWithRedisCache")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4724b340297719d2523c57282715dd33c23e0664")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f144439ca6d032cde796902d8c2cd80afdcfcbb9")]
 [assembly: System.Reflection.AssemblyProductAttribute("WheatherForecastBlazorWithRedisCache")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WheatherForecastBlazorWithRedisCache")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

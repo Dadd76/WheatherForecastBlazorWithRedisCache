@@ -1,8 +1,10 @@
 ﻿@page "/weather"
-@attribute [StreamRendering]
+
 @using WheatherForecastBlazorWithRedisCache.Extensions
 @inject WeatherForcastService WeatherForecastService
 @inject IDistributedCache cache
+@rendermode InteractiveServer
+@* @attribute [StreamRendering] *@
 
 <PageTitle>Weather</PageTitle>
 
@@ -22,7 +24,7 @@
 }
 else
 {
-    <div class="h3" @isCacheData>@loadLocation</div>
+    <div class="h3 @isCacheData">@loadLocation</div>
     <table class="table">
         <thead>
             <tr>
@@ -58,6 +60,8 @@ else
 
     private async Task LoadForecast()
     {
+        Console.WriteLine("LoadForecast button clicked!");
+
         forecasts = null ;
         loadLocation = null;
         string recordKey = "WeatherForecast_" + DateTime.Now.ToString("yyyyMMdd_hhmm");
